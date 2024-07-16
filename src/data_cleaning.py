@@ -52,7 +52,7 @@ class DataPreprocessStrategy(DataStrategy):
         
 
 class DataDivideStrategy(DataStrategy):
-    def handle_data(self, data: pd.DataFrame) -> pd.DataFrame | pd.Series:
+    def handle_data(self, data: pd.DataFrame):
         try:
             X = data.drop(["review_score"], axis=1)
             y = data["review-score"]
