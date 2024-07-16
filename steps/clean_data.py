@@ -5,7 +5,7 @@ from zenml import step
 from src.data_cleaning import DataCleaning, DataDivideStrategy, DataPreprocessStrategy
 
 @step
-def clean_df(df: pd.DataFrame):
+def clean_data(df: pd.DataFrame):
     try:
         process_strategy = DataPreprocessStrategy()
         data_cleaning = DataCleaning(df, process_strategy)
